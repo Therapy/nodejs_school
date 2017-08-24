@@ -1,0 +1,18 @@
+{
+  "name": "yandex_nodejs",
+  "version": "0.0.2",
+  "description": "test for nodejs_school",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "yandex_nodejs",
+    "nodejs_school"
+  ],
+  "author": "Therapy <therapyspb@yandex.ru>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  }
+}
