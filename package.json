@@ -1,5 +1,5 @@
 {
-  "name": "yandex_nodejs",
+  "name": "nodejs_school",
   "version": "0.0.2",
   "description": "test for nodejs_school",
   "main": "index.js",
@@ -13,6 +13,5 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1"
   }
 }

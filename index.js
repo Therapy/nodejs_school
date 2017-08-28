@@ -1,0 +1,38 @@
+const MyFormFields = {
+  form: document.getElementById('myForm'),
+  fio: document.getElementById('fio'),
+  email: document.getElementById('email'),
+  phone: document.getElementById('phone')
+};
+
+form.setAtttibute('novalidate', true);
+
+const MyForm = {
+  validate() {
+    const checkValidity = {
+      // ровно три слова
+      fio: (MyFormFields.fio.value.trim().split(/\s/).length === 3),
+      // RFC 5322 (только для валидации имени почты)
+      email: (/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(yandex(?:\.(ru|ua|by|kz|com))|(?:ya\.ru))/.test(MyFormFields.email.value)),
+      //
+      phone: (/\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/.test(MyFormFields.phone.value) &&
+              MyFormFields.phone.value.replace(/\D/g, '')
+                                      .split('')
+                                      .map(val => +val)
+                                      .reduce((acc, val) => acc + val)),
+    };
+
+  },
+
+  getData() {
+
+  },
+
+  setData(form) {
+
+  },
+
+  submit() {
+
+  }
+};
