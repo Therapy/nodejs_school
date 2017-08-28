@@ -1,8 +1,8 @@
 let MyFormFields = {
   form: document.getElementById('myForm'),
-  fio: document.getElementById('fio'),
-  email: document.getElementById('email'),
-  phone: document.getElementById('phone'),
+  fio: document.querySelector('input[name=fio]'),
+  email: document.querySelector('input[name=email]'),
+  phone: document.querySelector('input[name=phone]'),
   submit: document.getElementById('submitButton')
 };
 
