@@ -22,8 +22,8 @@ var MyForm = {
       // формат +7(999)999-99-99 и сумма цифр не превышает 30
       phone: (/\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/.test(Fields.phone.value) &&
         Fields.phone.value.replace(/\D/g, '')
-                                .split('')
-                                .reduce((acc, val) => acc + +val, 0) <= 30), // parseInt(val);
+                          .split('')
+                          .reduce((acc, val) => acc + +val, 0) <= 30), // parseInt(val);
     };
 
     for (let key in checkValidity) {

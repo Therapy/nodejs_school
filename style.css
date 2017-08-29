@@ -14,22 +14,36 @@ body {
 .section {
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .header {
   text-align: center;
-  font-weight: inherit;
   line-height: 1.2;
   font-size: 1.266em;
 }
 
-.input_info {
-  line-height: 1.1;
+.field_label {
+  display: block;
+  line-height: 1;
+}
+
+.field_input {
+  border: 1px solid #8c8c8c;
+  width: 100%;
+  margin-bottom: 5px;
+  padding-left: 3px;
+}
+
+.field_info {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 3px;
+  line-height: 1;
   font-size: 0.702em;
   color: #706a6a;
 }
 
-.error {
-  border: 1px solid #ff0000;
+.field_input.error {
+  border-color: #ff0000;
 }
