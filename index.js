@@ -8,7 +8,7 @@ let Fields = {
 
 const container = document.getElementById('resultContainer');
 
-// todo: переписать на классах
+// var для выполнения условия с глобальной областью видимости
 var MyForm = {
   validate() {
     let errorFields = [],
@@ -53,6 +53,8 @@ var MyForm = {
       Fields.fio.value = fields.fio;
       Fields.email.value = fields.email;
       Fields.phone.value = fields.phone;
+    } else {
+      return 'Неверный формат!';
     }
     return;
   },
@@ -89,25 +91,23 @@ function fetchRequest() {
   container.classList.remove('error', 'success', 'progress');
   const url = getRandomURL();
 
-  return  fetch(`${Fields.form.action}${url}`)
+  return  fetch(Fields.form.action+ url)
           .then(res => res.json())
           .then(data => {
+            // для проверки ответов от сервера и стилей
+            Fields.submit.disabled = false;
             switch (data.status) {
               case 'error':
                 container.classList.add('error');
                 container.innerText = data.reason || 'Произошла ошибка на сервере!';
-                // для проверки ответов от сервера
-                // Fields.submit.disabled = false;
                 break;
               case 'success':
                 container.classList.add('success');
                 container.innerText = 'Успешно!';
-                // Fields.submit.disabled = false;
                 break;
               case 'progress':
                 container.classList.add('progress');
                 container.innerText = 'Подождите, идет загрузка!';
-                // Fields.submit.disabled = false;
                 setTimeout(() => fetchRequest(), data.timeout);
                 break;
             }
