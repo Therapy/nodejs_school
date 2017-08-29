@@ -23,5 +23,6 @@ jspm_packages/
 *.tgz
 
 # my temp files
-http.js
 .npmrc
+.jscsrc
+.jshintrc
