@@ -79,16 +79,19 @@ h1 {
 }
 
 .result.error {
-  display: block;
+  display: inline-block;
   border-color: #ff0000;
+  color: #ff0000;
 }
 
 .result.success {
   display: block;
   border-color: #0e7c30;
+  color: #0e7c30;
 }
 
 .result.progress {
   display: block;
   border-color: #8c8c8c;
+  color: #8c8c8c;
 }

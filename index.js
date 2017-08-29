@@ -91,11 +91,11 @@ function fetchRequest() {
   container.classList.remove('error', 'success', 'progress');
   const url = getRandomURL();
 
-  return  fetch(Fields.form.action+ url)
+  return  fetch(Fields.form.action + url)
           .then(res => res.json())
           .then(data => {
-            // для проверки ответов от сервера и стилей
-            Fields.submit.disabled = false;
+            // для проверки ответов от сервера и обновления стилей
+            // Fields.submit.disabled = false;
             switch (data.status) {
               case 'error':
                 container.classList.add('error');
