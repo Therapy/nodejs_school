@@ -77,11 +77,11 @@ function getRandomURL() {
 
   switch (random) {
     case 0:
-      return 'error.json';
+      return '/error.json';
     case 1:
-      return 'success.json';
+      return '/success.json';
     case 2:
-      return 'progress.json';
+      return '/progress.json';
   }
 }
 
@@ -89,7 +89,7 @@ function fetchRequest() {
   container.classList.remove('error', 'success', 'progress');
   const url = getRandomURL();
 
-  return  fetch(`${Fields.form.action}/${url}`)
+  return  fetch(`${Fields.form.action}${url}`)
           .then(res => res.json())
           .then(data => {
             switch (data.status) {
