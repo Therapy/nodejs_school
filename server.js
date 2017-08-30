@@ -19,7 +19,7 @@ http.createServer((req, res) => {
         '.json': 'application/json',
       };
 
-  contentType = mimeTypes[extname] || 'application/json';
+  contentType = mimeTypes[extname] || 'application/octet-stream';
 
   fs.readFile(filePath, (error, content) => {
     if (error) {
